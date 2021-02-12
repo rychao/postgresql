@@ -16,3 +16,5 @@ def query_db():
     cur.connection.close()
     query = (r[0] if r else None) if one else r
     return jsonify(query)
+
+# postgres

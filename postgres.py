@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/summoner_by_name')
 
 def query_db():
-    conn = psycopg2.connect( user="admin", password="password123!", host="34.122.166.248", port="5432", database="my-postgres")
+    conn = psycopg2.connect( user="admin", password=<REDACTED>, host=<REDACTED>, port="5432", database="my-postgres")
     cur = conn.cursor()
     cur.execute("select * from summoner_by_name limit %s", (1,))
     one = False

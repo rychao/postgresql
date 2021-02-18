@@ -5,7 +5,6 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 @app.route('/summoner_by_name')
-
 def query_db():
     conn = psycopg2.connect( user="admin", password=<REDACTED>, host=<REDACTED>, port="5432", database="my-postgres")
     cur = conn.cursor()
@@ -17,4 +16,5 @@ def query_db():
     query = (r[0] if r else None) if one else r
     return jsonify(query)
 
-# postgres
+if __name__ = '__main__':
+    app.run()
